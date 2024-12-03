@@ -1,5 +1,7 @@
 const os = require('os');
 
+require('dotenv').config();
+
 const config = {
   gcloud: {
     bucket: 'fldemo-files',

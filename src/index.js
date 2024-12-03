@@ -178,7 +178,7 @@ if (fs.existsSync(publicDir)) {
   });
 }
 
-const PORT = process.env.NODE_ENV === 'dev_stage' ? 3000 : 8080;
+const PORT = process.env.NODE_ENV === 'dev_stage' ? 3000 : process.env.PORT;
 
 db.sequelize.sync().then(function () {
   app.listen(PORT, () => {
